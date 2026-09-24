@@ -6,7 +6,7 @@ public class Bateau {
 	public Bateau(String nom, int taille) {
 		this.nom = nom;
 		this.taille = taille;
-		this.element = new Element[taille];
+
 	}
 
 	public String getNom() {
@@ -15,6 +15,12 @@ public class Bateau {
 
 	public String toString() {
 		return "Bateau [nom=" + nom + ", taille=" + taille + ", elements=" + Arrays.toString(elements) + "]";
+	}
+public void attaquer(int numElement) {
+	elements[numElement - 1].toucher();
+}
+	public static void main(String[] args) {
+		
 	}
 
 	private String nom;
